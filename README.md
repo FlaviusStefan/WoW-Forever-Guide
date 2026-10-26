@@ -82,22 +82,22 @@ Fiecare personaj poate avea **2 profesii principale** și poate învăța separa
 
 ### Profesii care adună materiale
 
-| Profesie | Ce faci? | La ce ne ajută? |
-|---|---|---|
-| ⛏️**Mining** | Cauti veins → ores, stone și gems | Materiale pentru Engineering și Blacksmithing. |
-| 🌿**Herbalism** | Culegi plante si ierburi | Ali le foloseste pentru potiuni si alte consumabile. |
-| ✂️**Skinning** | Obtii leather & piei de la mob (bestii) **(DIFERIT DE TAILORING)** | Necu crafteaza gear, iar pielea suplimentara poate fi folosita sau vanduta. |
+| Profesie | Ce faci? | La ce ne ajută? | Link |
+|---|---|---|---|
+| ⛏️**Mining** | Cauti veins → ores, stone și gems | Materiale pentru Engineering și Blacksmithing. | https://www.wow-professions.com/forever/mining-leveling-guide |
+| 🌿**Herbalism** | Culegi plante si ierburi | Ali le foloseste pentru potiuni si alte consumabile. | ! SOON TO COME ! |
+| ✂️**Skinning** | Obtii leather & piei de la mob (bestii) **(DIFERIT DE TAILORING)** | Necu crafteaza gear, iar pielea suplimentara poate fi folosita sau vanduta. | ! SOON TO COME ! |
 
 ### Profesii care creează obiecte
 
-| Profesie | Ce faci? | La ce ne ajută? |
-|---|---|---|
-| 🧪**Alchemy** | Folosesti herbs + alte materiale pentru pots si elixire | 🔴Healing🔴<br>🔵Mana🔵 |
-| 🔨**Blacksmithing** | Materiale pentru arme & armura | POATE face UP pentru Flav, Sebi si spre late-game pentru Tipu,Necu |
-| 🪄**Enchanting** | Craftezi enchants care se pot pune pe APROAPE orice parte de armura | ⬆️⬆️⬆️ BUFF ⬆️⬆️⬆️ la arme si armuri |
-| ⚙️**Engineering** | Materiale pentru explosives, bombs, guns, scopes si gadgets | ⬆️🟢DMG AMP🟢⬆️, control si utilitate in PvE si PvP. |
-| 🐮**Leatherworking** | Folosesti leather și hides pentru armura si alte obiecte din piele | Crafting pentru gear potrivit anumitor clase si specs |
-| 🪡**Tailoring** | Folosesti cloth obtinut in principal de la humanoid mobs **(DIFERIT DE SKINNING!)** | Cloth gear si bags |
+| Profesie | Ce faci? | La ce ne ajută? | Link |
+|---|---|---|---|
+| 🧪**Alchemy** | Folosesti herbs + alte materiale pentru pots si elixire | 🔴Healing🔴<br>🔵Mana🔵 | https://www.wow-professions.com/forever/alchemy-leveling-guide |
+| 🔨**Blacksmithing** | Materiale pentru arme & armura | POATE face UP pentru Flav, Sebi si spre late-game pentru Tipu,Necu | https://www.wow-professions.com/forever/blacksmithing-leveling-guide |
+| 🪄**Enchanting** | Craftezi enchants care se pot pune pe APROAPE orice parte de armura | ⬆️⬆️⬆️ BUFF ⬆️⬆️⬆️ la arme si armuri | https://www.wow-professions.com/forever/enchanting-leveling-guide |
+| ⚙️**Engineering** | Materiale pentru explosives, bombs, guns, scopes si gadgets | ⬆️🟢DMG AMP🟢⬆️, control si utilitate in PvE si PvP. | https://www.wow-professions.com/forever/engineering-leveling-guide |
+| 🐮**Leatherworking** | Folosesti leather și hides pentru armura si alte obiecte din piele | Crafting pentru gear potrivit anumitor clase si specs | https://www.wow-professions.com/forever/leatherworking-leveling-guide |
+| 🪡**Tailoring** | Folosesti cloth obtinut in principal de la humanoid mobs **(DIFERIT DE SKINNING!)** | Cloth gear si bags | https://www.wow-professions.com/forever/tailoring-leveling-guide |
 
 >**Nota**: Lipseste 💎**Jewelcrafting**. Cel mai bine discutam
 
