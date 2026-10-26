@@ -28,7 +28,7 @@
 | Ali | Undead | ![Warlock](https://img.shields.io/badge/Warlock-9482C9?style=flat-square) | Affliction | 🏹 Ranged DPS |
 | Necu | ? | ![Hunter](https://img.shields.io/badge/Hunter-ABD473?style=flat-square) | ? | 🏹 Ranged DPS |
 | Sebi | Undead | ![Paladin](https://img.shields.io/badge/Paladin-F58CBA?style=flat-square) | Retribution | 🗡️ Melee DPS |
-| Adi | ? | ![Rogue](https://img.shields.io/badge/Rogue-FFF569?style=flat-square) | Combat | 🗡️ Melee DPS |
+| Adi | Orc | ![Rogue](https://img.shields.io/badge/Rogue-FFF569?style=flat-square) | Combat | 🗡️ Melee DPS |
 | Tipu | ? | ![Shaman](https://img.shields.io/badge/Shaman-0070DE?style=flat-square) | ? | 🗡️/🏹 Ranged/Melee DPS |
 
 # 3. Gear - Cine/Ce poarta
