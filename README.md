@@ -30,3 +30,30 @@
 | Sebi | Undead | ![Paladin](https://img.shields.io/badge/Paladin-F58CBA?style=flat-square) | Retribution | 🗡️ Melee DPS |
 | Adi | ? | ![Rogue](https://img.shields.io/badge/Rogue-FFF569?style=flat-square) | Combat | 🗡️ Melee DPS |
 | Tipu | ? | ![Shaman](https://img.shields.io/badge/Shaman-0070DE?style=flat-square) | ? | 🗡️/🏹 Ranged/Melee DPS |
+
+# 3. Gear - Cine/Ce poarta
+
+### 3.1. Armor progression pe clase
+
+| Armor Type | Clase | Lvl |
+|---|---|---|
+| 🧵**Cloth** | Vladi, Ali | **TOT TIMPUL** |
+| 🧥**Leather** | Adi, Necu, Tipu | Adi: **TOT TIMPUL** <br>Necu & Tipu: Level 1-39 |
+| **🧥Leather → ⛓️Mail** | Necu, Tipu | Level 40–60 |
+| ⛓️**Mail** | Flav,Sebi | Tipu,Necu: Lvl 40-60 <br>Flav,Sebi: Level 1–39|
+| **⛓️Mail → 🪖Plate** | Flav,Sebi | Level 40–60 |
+
+> **Important:** Mergem in capitală să vedem cât/cum costă.
+
+
+### 3.2. Ce am zis mai sus, doar ca SIMPLIFICAT, de la MIC la **MARE**
+
+| Nume | Armor Progression |
+|---|---|
+| Vladi | 🧵 Cloth |
+| Ali | 🧵 Cloth |
+| Adi | 🧥 Leather |
+| Tipu | 🧥 **Leather** până la 39<br>⛓️ **Mail** de la 40 în sus |
+| Necu | 🧥 **Leather** până la 39<br>⛓️ **Mail** de la 40 în sus |
+| Sebi  | ⛓️ **Mail** până la 39<br>🪖 **Plate** de la 40 în sus |
+| Flav | ⛓️ **Mail** până la 39<br>🪖 **Plate** de la 40 în sus |
