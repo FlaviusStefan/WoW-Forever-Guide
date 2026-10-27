@@ -27,6 +27,7 @@
 | Vladi | Troll | ![Priest](https://img.shields.io/badge/Priest-FFFFFF?style=flat-square) | Discipline | 💚 Heal |
 | Ali | Undead | ![Warlock](https://img.shields.io/badge/Warlock-9482C9?style=flat-square) | Affliction | 🏹 Ranged DPS |
 | Necu | Troll | ![Hunter](https://img.shields.io/badge/Hunter-ABD473?style=flat-square) | Beast Mastery | 🏹 Ranged DPS |
+| Octi | Orc/Troll | ![Hunter](https://img.shields.io/badge/Hunter-ABD473?style=flat-square) | ? | 🏹 Ranged DPS | 
 | Sebi | Undead | ![Paladin](https://img.shields.io/badge/Paladin-F58CBA?style=flat-square) | Retribution | 🗡️ Melee DPS |
 | Adi | Orc | ![Rogue](https://img.shields.io/badge/Rogue-FFF569?style=flat-square) | Combat | 🗡️ Melee DPS |
 | Tipu | Orc | ![Shaman](https://img.shields.io/badge/Shaman-0070DE?style=flat-square) | Enhancement | 🗡️ Melee DPS |
@@ -41,7 +42,7 @@ Ordinea este de la cel mai **slab** (🧵 Cloth) la cel mai **tare** (🪖 Plate
 | Vladi | Priest | 🧵 **Cloth** — tot timpul |
 | Ali | Warlock | 🧵 **Cloth** — tot timpul |
 | Adi | Rogue | 🧥 **Leather** — tot timpul |
-| Necu | Hunter | 🧥 **Leather** pana la 39<br>⛓️ **Mail** de la 40 in sus |
+| Necu, Octi | Hunter | 🧥 **Leather** pana la 39<br>⛓️ **Mail** de la 40 in sus |
 | Tipu | Shaman | 🧥 **Leather** pana la 39<br>⛓️ **Mail** de la 40 in sus |
 | Sebi | Paladin | ⛓️ **Mail** pana la 39<br>🪖 **Plate** de la 40 in sus |
 | Flav | Warrior | ⛓️ **Mail** pana la 39<br>🪖 **Plate** de la 40 in sus |
@@ -69,6 +70,7 @@ Am ales profesiile dupa **3 reguli**:
 | Vladi | Priest | 💚 Heal | — *(Cloth de la mobi)* | 🪡 Tailoring + 🪄 Enchanting | Tailoring crafteaza **exact armor type-ul lui (Cloth)** + bags pentru tot grupul. Ce nu foloseste **dezenchanteaza** — de aia cele doua merg mereu impreuna. |
 | Ali | Warlock | 🏹 Ranged DPS | 🌿 Herbalism | 🧪 Alchemy | Warlock-ul isi face Healthstone singur, dar **arde mana** — are nevoie de mana pots. Herbalism il alimenteaza direct. |
 | Necu | Hunter | 🏹 Ranged DPS | ✂️ Skinning | 🐮 Leatherworking | Hunter-ul **omoara bestii non-stop** — cel mai bun skinner din joc. Leatherworking ii face **Leather 1-39 → Mail 40+** (fix progresia lui) si, cel mai important, **Quiver / Ammo Pouch** (+ranged attack speed). |
+| Octi | Hunter | 🏹 Ranged DPS | ⛏️ Mining | ⚙️ Engineering | Mining ii asigura materialele pentru Engineering. Bombele, grenades si scopes ii dau damage si control, utile atat solo, cat si in dungeons. |
 | Sebi | Paladin | 🗡️ Melee DPS | ⛏️ Mining | 🔨 Blacksmithing | Mining da **Toughness** (+stamina) pentru melee. Blacksmithing ii face **Mail 1-39 → Plate 40+** (fix progresia lui) + arme, si pentru el si pentru Flav. |
 | Adi | Rogue | 🗡️ Melee DPS | ⛏️ Mining | ⚙️ Engineering | Rogue + Engineering e combinatia clasica: **Sapper Charges, Rocket Boots, grenades**. Mining ii da ore-ul (+Toughness stamina). Nu ia Leatherworking pentru ca **Necu ii crafteaza deja gear-ul**. |
 | Tipu | Shaman | 🗡️ Melee DPS | 🌿 Herbalism + ✂️ Skinning | — *(gatherer dedicat)* | Enhancement e **melee**, deci skinuieste usor ce omoara. Alimenteaza **exact cele doua crafturi care consuma cel mai mult**: Alchemy (herbs) si Leatherworking (leather) — iar Necu ii face gear-ul lui. |
@@ -77,24 +79,24 @@ Am ales profesiile dupa **3 reguli**:
 
 | Gathering | Cati | Cine |
 |---|---|---|
-| ⛏️ Mining | **3** | Flav, Sebi, Adi |
+| ⛏️ Mining | **4** | Flav, Sebi, Adi, Octi |
 | 🌿 Herbalism | **2** | Ali, Tipu |
 | ✂️ Skinning | **2** | Necu, Tipu |
 
 | Crafting | Cati | Cine |
 |---|---|---|
-| ⚙️ Engineering | **2** | Flav, Adi |
+| ⚙️ Engineering | **3** | Flav, Adi, Octi |
 | 🔨 Blacksmithing | 1 | Sebi |
 | 🧪 Alchemy | 1 | Ali |
 | 🐮 Leatherworking | 1 | Necu |
 | 🪡 Tailoring | 1 | Vladi |
 | 🪄 Enchanting | 1 | Vladi |
 
-> **Toate cele 6 profesii de crafting sunt acoperite.** Fiecare consumator de ore (Flav, Sebi, Adi) isi mineste singur ore-ul — nu depinde de nimeni.
+> **Toate cele 6 profesii de crafting sunt acoperite.** Fiecare consumator de ore (Flav, Sebi, Adi, Octi) isi mineste singur ore-ul — nu depinde de nimeni.
 
-> **De ce exact 3 Mining?** Pentru ca avem **exact 3 crafturi care consuma ore** (2x Engineering + 1x Blacksmithing). Un al 4-lea miner ar fi doar gold, in timp ce Leatherworking ramanea fara piele.
+> **De ce 4 Mining?** Avem **4 crafturi care consuma ore** (3x Engineering + 1x Blacksmithing). Fiecare isi strange materialele pentru propriul crafting.
 
-> **De ce 2 Engineeri (Flav + Adi)?** Bombele, sapperele si Rocket Boots **pot fi folosite DOAR de cel care are profesia**. Nu poti face un sapper pentru altcineva. La celelalte crafturi (BS, LW, Tailoring, Alchemy) obiectul il poate folosi oricine — deci acolo duplicarea ar fi pierdere. Aici e castig curat.
+> **De ce 3 Engineeri (Flav, Adi + Octi)?** Bombele, sapperele si Rocket Boots **pot fi folosite DOAR de cel care are profesia**. Nu poti face un sapper pentru altcineva. La celelalte crafturi (BS, LW, Tailoring, Alchemy) obiectul il poate folosi oricine — deci acolo duplicarea ar fi pierdere. Aici e castig curat.
 
 > **De ce Tipu nu are crafting?** Toate cele 6 crafturi sunt deja luate. Alchemy si Leatherworking sunt cele mai **hamesite** de materiale cand le ridici la 300 — Tipu le acopera pe amandoua. Daca mai tarziu vrem mai multe pots, poate schimba Skinning → 🧪 Alchemy.
 
@@ -142,6 +144,10 @@ Am ales profesiile dupa **3 reguli**:
 - **Pentru clasa lui:** Hunter-ul omoara bestii non-stop = **cel mai bun skinner**. LW ii face **Quiver** (+ranged attack speed) — item de clasa.
 - **Pentru grup:** Leather pentru Adi, Leather→Mail pentru el si Tipu, **armor kits** pentru toti.
 
+### Octi — ⛏️ Mining + ⚙️ Engineering *(Hunter, Ranged DPS)*
+- **Pentru clasa lui:** Isi strange singur ore-ul in timpul questing-ului si il transforma in bombe, grenades si scopes pentru arma ranged.
+- **Pentru grup:** al **treilea** Engineer care poate folosi sappere, grenades si Rocket Boots in dungeons.
+
 ### Sebi — ⛏️ Mining + 🔨 Blacksmithing *(Paladin, Melee DPS)*
 - **Pentru clasa lui:** BS crafteaza **Mail 1-39 → Plate 40+**, exact progresia lui.
 - **Pentru grup:** arme si armura pentru el si Flav + sharpening stones pentru toti melee.
@@ -177,16 +183,18 @@ Am ales profesiile dupa **3 reguli**:
 - [ ] Vladi: 🪡 Tailoring + 🪄 Enchanting
 - [ ] Ali: 🌿 Herbalism + 🧪 Alchemy
 - [ ] Necu: ✂️ Skinning + 🐮 Leatherworking
+- [ ] Octi: ⛏️ Mining + ⚙️ Engineering
 - [ ] Sebi: ⛏️ Mining + 🔨 Blacksmithing
 - [ ] Adi: ⛏️ Mining + ⚙️ Engineering
 - [ ] Tipu: 🌿 Herbalism + ✂️ Skinning
 
-### Profesii secundare — Toți cei 7
+### Profesii secundare — Toți cei 8
 
 - [ ] Flav: First Aid + Cooking + Fishing
 - [ ] Vladi: First Aid + Cooking + Fishing
 - [ ] Ali: First Aid + Cooking + Fishing
 - [ ] Necu: First Aid + Cooking + Fishing
+- [ ] Octi: First Aid + Cooking + Fishing
 - [ ] Sebi: First Aid + Cooking + Fishing
 - [ ] Adi: First Aid + Cooking + Fishing
 - [ ] Tipu: First Aid + Cooking + Fishing
