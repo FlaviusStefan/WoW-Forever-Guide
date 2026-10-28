@@ -19,17 +19,245 @@
 | Troll |  | X | X |  | X | X | X | X | X |
 | Undead |  |  | X | X | X | X |  | X | X |
 
-## 2. Clase
+## 2. Stats — Ce inseamna fiecare
 
-## 2.1. Hunter 🏹
+In WoW exista **5 stats primare**. Ele nu fac nimic direct — ele se **transforma** in altceva (HP, mana, damage, armor, crit). De aia acelasi item poate fi BIS pentru unul si gunoi pentru altul.
 
-### 2.1.1. PvE — Strengths & Weaknesses
+> ⚠️ **Important:** Formulele de mai jos sunt cele din **Classic (1.12)**, pe care **WoW Forever** le foloseste ca baza. Serverul poate avea ajustari proprii — verifica mereu pe **Character Sheet** (tasta `C`) si da **hover** pe stat ca sa vezi exact ce iti da TIE, pe clasa TA, la level-ul TAU.
+
+### 2.1. Tabel rapid
+
+| Stat | Ce face, pe scurt | Cine beneficiaza cel mai mult |
+|---|---|---|
+| 🔴 **Stamina** | Iti da **HP** | 🛡️ **Flav** (tank) — dar e bun pentru **TOTI** la leveling |
+| 💪 **Strength** | Iti da **Attack Power** (damage melee) | 🗡️ **Sebi** (Paladin Ret), 🛡️ **Flav** |
+| 🏃 **Agility** | **Attack Power** (doar Rogue & Hunter), **Crit**, **Dodge**, **Armor** | 🗡️ **Adi** (Rogue), 🏹 **Necu** & **Octi** (Hunter) |
+| 🔵 **Intellect** | Iti da **Mana** + **Spell Crit** | 💚 **Vladi** (Priest), 🏹 **Ali** (Warlock) |
+| ✨ **Spirit** | **Regen** de mana si HP **in afara luptei** | 💚 **Vladi** (Priest) |
+
+---
+
+### 2.2. 🔴 Stamina — Cat traiesti
+
+**Ce face:** Iti creste **Health Points (HP)**. Atat. Dar e cel mai simplu si cel mai universal stat din joc.
+
+**Cum se calculeaza:**
+```
+Primele 20 de Stamina  →   1 HP / punct
+Fiecare punct PESTE 20 →  10 HP / punct
+```
+Deci **100 Stamina** = `20 × 1` + `80 × 10` = **820 HP** adaugati peste HP-ul de baza dat de clasa si level.
+
+**La fel pentru toate clasele** — nu exista clasa care sa ia mai mult HP per punct de Stamina.
+
+| Cine | Cat conteaza | De ce |
+|---|---|---|
+| 🛡️ **Flav** (Warrior Prot) | ⭐⭐⭐⭐⭐ | **Stat-ul #1 al tankului.** Mai mult HP = Vladi are timp sa te prinda cu heal. Fara HP, mori intre doua heal-uri. |
+| 🏹 **Ali** (Warlock) | ⭐⭐⭐⭐ | Isi transforma HP-ul in mana (**Life Tap**) si in Healthstone. Pentru el Stamina e **indirect si mana**. |
+| 🗡️ **Adi**, **Sebi**, **Tipu** (melee) | ⭐⭐⭐ | Stau in fata, iau AoE si mobii care scapa de pe tank. |
+| 💚 **Vladi** (Priest) | ⭐⭐⭐ | Nu pentru damage — ca sa **supravietuiasca** unui hit pana il scoate cineva. |
+| 🏹 **Necu** / **Octi** (Hunter) | ⭐⭐ | Stau departe, dar la leveling solo conteaza. |
+
+> 💡 **Regula de leveling:** Pana pe la level 40, **Stamina e bun pentru oricine**. Daca mori mai rar, levelezi mai repede. Nu refuza un item doar pentru ca are "doar" Stamina.
+
+---
+
+### 2.3. 💪 Strength — Damage de melee
+
+**Ce face:** Iti da **Attack Power (AP)**, care se traduce in damage cu arma. Si **Block Value**, daca porti scut.
+
+**Cum se calculeaza:**
+```
+Warrior, Paladin, Shaman, Druid    →  2 Attack Power / Strength
+Rogue, Hunter, Mage, Priest, Lock  →  1 Attack Power / Strength
+
+Block Value = Strength / 20
+
+14 Attack Power = +1 DPS cu arma
+```
+
+Deci **Sebi (Paladin)** ia **dublu** AP din Strength fata de **Adi (Rogue)**. Acelasi item, efect diferit.
+
+| Cine | Cat conteaza | De ce |
+|---|---|---|
+| 🗡️ **Sebi** (Paladin Ret) | ⭐⭐⭐⭐⭐ | **Stat-ul lui #1.** 2 AP / punct, iar Ret loveste rar si tare — vrea numere mari pe hit. |
+| 🛡️ **Flav** (Warrior Prot) | ⭐⭐⭐⭐ | 2 AP / punct + **Block Value** + mai mult damage = **mai mult threat**. Tankul fara threat nu e tank. |
+| 🗡️ **Tipu** (Enh Shaman) | ⭐⭐⭐⭐⭐ | **Stat-ul lui #1.** 2 AP / punct, in timp ce Agility ii da **0 AP**. Enhancement traieste din Attack Power. |
+| 🗡️ **Adi** (Rogue) | ⭐⭐ | Doar **1 AP** / punct. Nu e rau, dar Agility e net superior pentru el. |
+| 🏹 **Necu** / **Octi** (Hunter) | ⭐ | **NU** creste damage-ul **ranged**. Aproape inutil. |
+| 💚 **Vladi** / 🏹 **Ali** | ❌ | Tehnic iau 1 AP / punct, dar **nu lovesc niciodata cu arma**. Strength **NU** da spell damage. |
+
+> ❌ **Greseala clasica:** "Am gasit item cu +Strength si sunt Priest, il iau ca e numarul mare." **Nu.** Strength nu face absolut nimic pentru un caster.
+
+---
+
+### 2.4. 🏃 Agility — Cel mai complex stat
+
+**Ce face:** **4 lucruri deodata** — de aia e atat de puternic pentru clasele potrivite.
+
+**Cum se calculeaza:**
+```
+1. ARMOR   →  Agility × 2   (la TOATE clasele)
+
+2. ATTACK POWER
+      Rogue, Hunter, Druid (cat form)   →  1 AP / Agility
+      Warrior, Paladin, SHAMAN, casteri →  0 AP / Agility
+
+3. CRIT  (aproximativ, la level 60)
+      Warrior / Paladin / Shaman / Druid  →  ~20 Agility = 1% crit
+      Rogue                               →  ~29 Agility = 1% crit
+      Hunter                              →  ~53 Agility = 1% crit (ranged)
+
+4. DODGE   →  sansa sa eviti complet un atac
+```
+
+> ⚠️ **ATENTIE, Tipu!** **Shaman-ul NU primeste Attack Power din Agility** in Classic — la fel ca Warrior si Paladin. Din Agility iei doar **crit, armor si dodge**. De aia **Strength** (2 AP / punct) este stat-ul tau principal, nu Agility.
+
+> ⚠️ Valorile de **crit** se schimba cu level-ul si difera pe clasa. **Verifica pe Character Sheet**, nu te lua strict dupa numerele astea.
+
+| Cine | Cat conteaza | De ce |
+|---|---|---|
+| 🗡️ **Adi** (Rogue Combat) | ⭐⭐⭐⭐⭐ | **Stat-ul lui #1, fara discutie.** Ii da AP **si** crit **si** dodge **si** armor. Combat traieste din crit-uri. |
+| 🏹 **Necu** / **Octi** (Hunter) | ⭐⭐⭐⭐⭐ | **Stat-ul lor #1.** Ii da ranged attack power **si** crit. Hunterul e clasa cea mai dependenta de Agility din joc. |
+| 🛡️ **Flav** (Warrior Prot) | ⭐⭐⭐⭐ | **Nu** pentru damage (0 AP!), ci pentru **Armor + Dodge** — tankul vrea sa fie lovit mai rar si mai slab. |
+| 🗡️ **Tipu** (Enh Shaman) | ⭐⭐⭐ | **0 AP din Agility!** Doar crit (~20 Agi = 1%), armor si dodge. Bun, dar **Strength e mai bun**. |
+| 🗡️ **Sebi** (Paladin Ret) | ⭐⭐ | 0 AP din Agility, dar primeste crit si armor. Clar secundar fata de Strength. |
+| 💚 **Vladi** / 🏹 **Ali** | ❌ | Doar putin armor. Practic inutil. |
+
+> 💡 **De retinut:** Agility **nu** da Attack Power la **Warrior, Paladin si Shaman**. Flav, Sebi si Tipu iau din el **doar** armor, crit si dodge — nu damage direct.
+
+---
+
+### 2.5. 🔵 Intellect — Cat de mult poti casta
+
+**Ce face:** Iti da **Mana** si **Spell Crit**.
+
+**Cum se calculeaza:**
+```
+Primele 20 de Intellect  →   1 mana / punct
+Fiecare punct PESTE 20   →  15 mana / punct
+
+Spell Crit  →  ~59,5 Intellect = 1%  (la level 60)
+
+Bonus ascuns: creste viteza cu care urci WEAPON SKILL
+```
+
+| Cine | Cat conteaza | De ce |
+|---|---|---|
+| 💚 **Vladi** (Priest Disc) | ⭐⭐⭐⭐⭐ | Mana = **cate heal-uri poate da**. Ramane fara mana → moare grupul. |
+| 🏹 **Ali** (Warlock) | ⭐⭐⭐⭐ | Mana pool mare = mai multe spell-uri intre Life Tap-uri. |
+| 🏹 **Necu** / **Octi** (Hunter) | ⭐⭐⭐ | **Da, Hunterul foloseste mana in Classic!** La leveling conteaza mult mai mult decat crezi. |
+| 🗡️ **Sebi** (Paladin Ret) | ⭐⭐ | Mana pentru Seal-uri, Judgement si un heal de urgenta. |
+| 🗡️ **Tipu** (Enh Shaman) | ⭐⭐ | Totems, Lightning Shield si heal-uri costa mana. |
+| 🛡️ **Flav** / 🗡️ **Adi** | ❌ | Warrior foloseste **Rage**, Rogue foloseste **Energy**. **Nu au mana deloc.** Intellect = 0 pentru ei. |
+
+> ❌❌ **CEA MAI MARE GRESEALA DE INCEPATOR**
+>
+> In **Classic**, Intellect **NU** iti creste damage-ul la spell-uri! Nu exista "spell power din Intellect" ca in expansion-urile noi.
+>
+> Damage-ul si healing-ul de spell vin **DOAR** din iteme pe care scrie explicit:
+> - `+X Spell Damage and Healing`
+> - `+X Healing`
+> - `+X Damage` de scoala (Fire, Shadow, Frost...)
+>
+> Deci **Vladi** trebuie sa caute **+Healing**, iar **Ali** sa caute **+Shadow Damage** — nu doar Intellect.
+
+---
+
+### 2.6. ✨ Spirit — Regen intre lupte
+
+**Ce face:** Iti regenereaza **mana** si **HP** — dar **doar cand NU castezi**.
+
+**Cum se calculeaza (mana per tick de 2 secunde):**
+```
+Priest, Mage                             →  (Spirit / 4) + 12,5
+Druid, Hunter, Paladin, Shaman, Warlock  →  (Spirit / 5) + 15
+```
+
+> 🕒 **REGULA CELOR 5 SECUNDE (5-Second Rule)** — cel mai important mecanism legat de Spirit:
+>
+> **Din momentul in care cheltui mana, Spirit-ul tau NU regenereaza nimic timp de 5 secunde.**
+>
+> Daca Vladi da heal la fiecare 3 secunde, **Spirit-ul lui nu face absolut nimic**. De aia healerii buni invata sa lase pauze scurte intre heal-uri — ca sa intre in regen.
+
+| Cine | Cat conteaza | De ce |
+|---|---|---|
+| 💚 **Vladi** (Priest Disc) | ⭐⭐⭐⭐⭐ | **Singurul care chiar traieste din Spirit.** Il tine in mana intre pull-uri si scurteaza pauzele de baut. Discipline are **Meditation** — talent care lasa o parte din regen sa mearga **si in timp ce castezi** (ocoleste partial regula celor 5 secunde). |
+| 🏹 **Ali** (Warlock) | ⭐⭐ | Are **Life Tap** — isi face mana din HP. Spirit e mult mai slab pentru el decat pentru Vladi. |
+| 🏹 **Necu** / **Octi** (Hunter) | ⭐⭐ | Ajuta intre pull-uri la leveling. |
+| 🗡️ **Sebi** / 🗡️ **Tipu** | ⭐ | Marginal in dungeon. **La leveling solo conteaza mai mult** decat crezi — mai putine pauze de baut. |
+| 🛡️ **Flav** / 🗡️ **Adi** | ❌ | Nu au mana. Spirit le da doar putin HP regen **in afara luptei** — aproape inutil. |
+
+---
+
+### 2.7. Ce stat vrea fiecare dintre noi
+
+Ordinea in care sa va uitati la iteme. **Stanga = cel mai important.**
+
+| Nume | Clasa / Spec | 🥇 Principal | 🥈 Secundar | ❌ Ignora complet |
+|---|---|---|---|---|
+| 🛡️ **Flav** | Warrior Protection | 🔴 **Stamina** | 💪 Strength → 🏃 Agility → *Defense* | 🔵 Intellect, ✨ Spirit |
+| 💚 **Vladi** | Priest Discipline | *+Healing* → 🔵 **Intellect** | ✨ Spirit → 🔴 Stamina | 💪 Strength, 🏃 Agility |
+| 🏹 **Ali** | Warlock Affliction | *+Shadow Damage* → 🔵 **Intellect** | 🔴 Stamina → ✨ Spirit | 💪 Strength, 🏃 Agility |
+| 🏹 **Necu** | Hunter Beast Mastery | 🏃 **Agility** | 🔴 Stamina → 🔵 Intellect | 💪 Strength, ✨ Spirit |
+| 🏹 **Octi** | Hunter | 🏃 **Agility** | 🔴 Stamina → 🔵 Intellect | 💪 Strength, ✨ Spirit |
+| 🗡️ **Sebi** | Paladin Retribution | 💪 **Strength** | 🔴 Stamina → 🏃 Agility → 🔵 Intellect | ✨ Spirit |
+| 🗡️ **Adi** | Rogue Combat | 🏃 **Agility** | 💪 Strength → 🔴 Stamina | 🔵 Intellect, ✨ Spirit |
+| 🗡️ **Tipu** | Shaman Enhancement | 💪 **Strength** | 🏃 Agility → 🔴 Stamina → 🔵 Intellect | — |
+
+> 💡 **La leveling (1–60), pentru TOATA lumea:** **arma** conteaza mai mult decat orice stat de pe armura. Un weapon upgrade bate 10 puncte de stat. Nu sta cu arma de level 12 cand esti level 30.
+
+---
+
+### 2.8. Stats derivate — ce vedeti pe Character Sheet
+
+Astea nu se gasesc (de obicei) direct pe iteme — ele **rezulta** din stats-urile primare:
+
+| Stat derivat | De unde vine | Ce face |
+|---|---|---|
+| **Attack Power** | Strength, Agility | `14 AP = +1 DPS` cu arma |
+| **Armor** | Agility × 2 + armura purtata | Reduce damage-ul **fizic** |
+| **Crit %** | Agility (melee), Intellect (spell) | Sansa de damage dublu |
+| **Dodge %** | Agility | Eviti complet atacul |
+| **Block %** | Scut + Strength | Blochezi o parte din damage |
+| **Health** | Stamina | Cat traiesti |
+| **Mana** | Intellect | Cate spell-uri poti da |
+
+**Cum functioneaza Armor:**
+```
+Reducere damage % = Armor / (Armor + 400 + 85 × Level_Atacator)
+
+CAP: maxim 75% reducere — mai mult armor peste cap nu face nimic
+```
+
+> ⚠️ Armor-ul reduce **DOAR damage fizic**. **Nu** te apara deloc de magie — pentru aia ai nevoie de **Resistances** (Fire, Frost, Shadow, Nature, Arcane).
+
+---
+
+### 2.9. ✅ Checklist — Stats
+
+- [ ] Toata lumea stie care e stat-ul ei **principal**.
+- [ ] Toata lumea stie ce stat sa **ignore** complet.
+- [ ] Vladi si Ali stiu ca **Intellect NU da spell damage** in Classic.
+- [ ] Flav si Adi stiu ca **Intellect si Spirit sunt 0** pentru ei (Rage / Energy).
+- [ ] Necu si Octi stiu ca **Strength nu creste damage-ul ranged**.
+- [ ] **Tipu** stie ca **Agility NU ii da Attack Power** — Strength e stat-ul lui principal.
+- [ ] Toata lumea da **hover pe Character Sheet (`C`)** ca sa verifice valorile pe server.
+- [ ] Nu dam roll pe iteme care nu ne folosesc (vezi tabelul 2.7).
+
+---
+
+## 3. Clase
+
+## 3.1. Hunter 🏹
+
+### 3.1.1. PvE — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
 | - **High Sustained DPS:** Damage constant si bun pe boss fights.<br>- **BUN RAU** pe solo leveling<br>- **Pull & Utilitate:** Feign Death si Freezing Trap ajuta la controlul pull-urilor. ! ATENTIE ! poti/puteti sa ne dati wipe usor | - **Ammo Dependency:** Are nevoie constant de arrows/bullets ( NU SUNT SIGUR DACA PE **FOREVER** EXISTA AMMO) <br>- **Pet Management:** Pet-ul poate da pull la add-uri daca nu il controlati bine<br>- **Threat Management:** Damage-ul mare poate face tank-ul sa piarda aggro.  **GRIJA** | 
 
-### 2.1.2. PvP — Strengths & Weaknesses
+### 3.1.2. PvP — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
@@ -37,15 +265,15 @@
 
 ---
 
-## 2.2. Priest ✨
+## 3.2. Priest ✨
 
-### 2.2.1. PvE — Strengths & Weaknesses
+### 3.2.1. PvE — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
 | - **Strong Heal**<br>- **Damage Prevention:** Power Word: Shield da absorb damage si castiga timp pentru window-uri de heal.<br>- **Group Utility:** Dispel Magic, Cure Disease si Power Word: Fortitude ajuta la cleanse la debuff-uri | - **Mana Management:** Healing-ul continuu mananca mana blana in dungeon-uri lungi.<br>- **Threat from Healing:** Heal-urile pot atrage aggro de la mobi daca tank-ul nu controleaza bine grupul. **!GRIJA FLAV!**<br>- **Low Armor:** Fiind Cloth, este vulnerabil daca este atacat direct. P.S.: O beleste grav |
 
-### 2.2.2. PvP — Strengths & Weaknesses
+### 3.2.2. PvP — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
@@ -53,15 +281,15 @@
 
 ---
 
-## 2.3. Warlock 🔥
+## 3.3. Warlock 🔥
 
-### 2.3.1. PvE — Strengths & Weaknesses
+### 3.3.1. PvE — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
 | - **Strong DoT:** Corruption, Curse of Agony si alte DoT-uri tin damage constant <br>- **Healthstone & Soulstone:** Healthstone ofera o optiune de supravietuire, iar Soulstone poate permite o revenire dupa moarte daca ii da prepare.<br>- **Crowd Control & Utility:** Fear, Banish si curses ajuta la gestionarea mobilor | - **Soul Shard Management:** Trebuie sa gestioneze shards pentru anumite spells si utilitati.<br>- **Threat from DoTs:** Damage-ul aplicat pe mai multe tinte complica aggro-ul in pull-uri mari.<br>- **Limited Mobility:** Multe spells necesita cast time, iar Warlock-ul nu se misca ca un Rogue sau Mage. |
 
-### 2.3.2. PvP — Strengths & Weaknesses
+### 3.3.2. PvP — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
@@ -69,15 +297,15 @@
 
 ---
 
-## 2.4. Paladin 🛡️
+## 3.4. Paladin 🛡️
 
-### 2.4.1. PvE — Strengths & Weaknesses
+### 3.4.1. PvE — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
 | - **Powerful Blessings:** Blessing of Might, Blessing of Kings si Blessing of Salvation pot imbunatati DMG, Stats sau Threat Control<br>- **Emergency Support:** Lay on Hands poate salva un aliat in situatii critice.<br>- **Strong Utility:** Auras, Cleanse si Blessing of Protection ofera suport defensiv si ajuta grupul sa gestioneze anumite mecanici. | - **Mana Dependency:** Healing-ul si abilitatile consumatoare de mana pot limita eficienta in lupte lungi.<br>- **Lower Mobility:** Are putine optiuni de mobilitate pentru a urmari rapid tinte sau a evita mecanici.<br>- **Damage Limitations:** Retribution poate avea damage mai putin constant decat alte spec-uri DPS
 
-### 2.4.2. PvP — Strengths & Weaknesses
+### 3.4.2. PvP — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
@@ -85,15 +313,15 @@
 
 ---
 
-## 2.5. Rogue 🗡️
+## 3.5. Rogue 🗡️
 
-### 2.5.1. PvE — Strengths & Weaknesses
+### 3.5.1. PvE — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
 | - **High Single-Target DPS** <br>- **Strong Crowd Control:**<br>- **Threat Control:** Feint si Vanish pot ajuta la gestionarea threat-ului si la evitarea unor situatii periculoase. | - **Limited Group Utility:** Nu are aproape deloc buffs pentru grupa<br>- **Melee Dependency:** <br>- **Energy & Combo Point Management** Rotatia e cea mai importanta: Gresesti ceva, ai cam supt-o|
 
-### 2.5.2. PvP — Strengths & Weaknesses
+### 3.5.2. PvP — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
@@ -101,15 +329,15 @@
 
 ---
 
-## 2.6. Shaman ⚡
+## 3.6. Shaman ⚡
 
-### 2.6.1. PvE — Strengths & Weaknesses
+### 3.6.1. PvE — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
 | - **Powerful Totem Support:** Strong rau daca sta langa toteme <br>- **Flexible Role:** Poate contribui cu damage melee, spell damage sau healing, in functie de spec.<br>- **Useful Utility:** E bun ofensiv si defensiv, e ce trb | - **Totem Positioning:** Totemele trebuie plasate corect si pot necesita inlocuire cand grupul se deplaseaza.<br>- **Mana Management:** Healing-ul si spell-urile pot consuma rapid mana.<br>- **Gear Competition:** Enhancement poate concura pentru anumite arme melee cu alte clase din grup. |
 
-### 2.6.2. PvP — Strengths & Weaknesses
+### 3.6.2. PvP — Strengths & Weaknesses
 
 | 🟢 STRENGTHS | 🔴 WEAKNESSES |
 |---|---|
@@ -117,7 +345,7 @@
 
 ---
 
-## 3. Cine ce joaca
+## 4. Cine ce joaca
 
 | Nume | Rasa | Clasa | Spec | Rol |
 |------|------|-------|------|-----|
@@ -130,7 +358,7 @@
 | Adi | Orc | ![Rogue](https://img.shields.io/badge/Rogue-FFF569?style=flat-square) | Combat | 🗡️ Melee DPS |
 | Tipu | Orc | ![Shaman](https://img.shields.io/badge/Shaman-0070DE?style=flat-square) | Enhancement | 🗡️ Melee DPS |
 
-## 4. Gear — Cine ce poarta
+## 5. Gear — Cine ce poarta
 
 Tipul de armura depinde de clasa. Unele clase fac **upgrade** la level 40.
 Ordinea este de la cel mai **slab** (🧵 Cloth) la cel mai **tare** (🪖 Plate).
@@ -148,13 +376,13 @@ Ordinea este de la cel mai **slab** (🧵 Cloth) la cel mai **tare** (🪖 Plate
 
 > **Important:** Upgrade-ul de la level 40 (Mail pentru Necu/Octi/Tipu, Plate pentru Flav/Sebi) se invata de la **class trainer** in capitala. Mergem impreuna sa vedem cat costa.
 
-## 5. Profesii & Crafting
+## 6. Profesii & Crafting
 
 Scopul nostru este să ne ajutăm reciproc cu materiale, echipament, consumabile și obiecte utile pentru dungeon-uri și PvP.
 
 Fiecare personaj poate avea **2 profesii principale** și poate învăța separat **Cooking, First Aid și Fishing**.
 
-### 5.1. Cine ce profesii alege
+### 6.1. Cine ce profesii alege
 
 Fiecare profesie este ori **Gathering** (aduni materiale din lume), ori **Crafting** (transformi materialele in obiecte).
 
@@ -201,7 +429,7 @@ Am ales profesiile dupa **3 reguli**:
 
 > **Atentie la Vladi:** Tailoring + Enchanting nu are nicio profesie de gathering. Cloth-ul vine de la **humanoid mobs**, deci tot grupul ii pastreaza cloth-ul. In schimb, el face **bags pentru toata lumea**.
 
-### 5.2. Ce face fiecare profesie?
+### 6.2. Ce face fiecare profesie?
 
 #### 5.2.1. Profesii care adună materiale
 
@@ -224,7 +452,7 @@ Am ales profesiile dupa **3 reguli**:
 
 >**Nota**: 💎 **Jewelcrafting** nu apare in lista. Trebuie sa verificam daca exista pe **WoW Forever** — daca da, cel mai usor ar fi sa o ia unul dintre mineri (Sebi sau Adi), pentru ca se alimenteaza din Mining. Discutam.
 
-### 5.3. Ce inseamna profesiile pentru noi?
+## 6.3. Ce inseamna profesiile pentru noi?
 
 #### 5.3.1. Flav — ⛏️ Mining + ⚙️ Engineering *(Warrior, Tank)*
 - **Pentru clasa lui:** Mining da **Toughness** (+stamina), iar tank-ul vrea stamina.
@@ -275,7 +503,7 @@ Am ales profesiile dupa **3 reguli**:
 
 > **Obiectiv:** Strangem materiale in timp ce facem leveling si le folosim pentru crafting, consumabile si upgrade-uri pentru tot grupul.
 
-### 5.4. Checklist — Profesii
+### 6.4. Checklist — Profesii
 
 #### 5.4.1. Profesii principale
 
