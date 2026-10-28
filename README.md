@@ -21,6 +21,10 @@
 
 ## 2. Stats — Ce inseamna fiecare
 
+**STATS EXPLICAT SUPER BINE**
+---
+https://www.youtube.com/watch?v=sJO8KHmXHX0&t=185s
+
 In WoW exista **5 stats primare**. Ele nu fac nimic direct — ele se **transforma** in altceva (HP, mana, damage, armor, crit). De aia acelasi item poate fi BIS pentru unul si gunoi pentru altul.
 
 > ⚠️ **Important:** Formulele de mai jos sunt cele din **Classic (1.12)**, pe care **WoW Forever** le foloseste ca baza. Serverul poate avea ajustari proprii — verifica mereu pe **Character Sheet** (tasta `C`) si da **hover** pe stat ca sa vezi exact ce iti da TIE, pe clasa TA, la level-ul TAU.
