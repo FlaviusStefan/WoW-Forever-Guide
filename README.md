@@ -72,6 +72,7 @@ Warrior, Paladin, Shaman, Druid    →  2 Attack Power / Strength
 Rogue, Hunter, Mage, Priest, Lock  →  1 Attack Power / Strength
 
 Block Value = Strength / 20
+**NU CRESTE BLOCK CHANCE(%) !**
 
 14 Attack Power = +1 DPS cu arma
 ```
@@ -99,9 +100,13 @@ Deci **Sebi (Paladin)** ia **dublu** AP din Strength fata de **Adi (Rogue)**. Ac
 ```
 1. ARMOR   →  Agility × 2   (la TOATE clasele)
 
-2. ATTACK POWER
-      Rogue, Hunter, Druid (cat form)   →  1 AP / Agility
+2. a.Ranged ATTACK POWER
+      Hunter                            →  2 AP / Agility
+      Rogue, Druid (cat form)           →  1 AP / Agility
       Warrior, Paladin, SHAMAN, casteri →  0 AP / Agility
+
+   b.Melee ATTACK POWER
+
 
 3. CRIT  (aproximativ, la level 60)
       Warrior / Paladin / Shaman / Druid  →  ~20 Agility = 1% crit
@@ -238,10 +243,6 @@ CAP: maxim 75% reducere — mai mult armor peste cap nu face nimic
 
 - [ ] Toata lumea stie care e stat-ul ei **principal**.
 - [ ] Toata lumea stie ce stat sa **ignore** complet.
-- [ ] Vladi si Ali stiu ca **Intellect NU da spell damage** in Classic.
-- [ ] Flav si Adi stiu ca **Intellect si Spirit sunt 0** pentru ei (Rage / Energy).
-- [ ] Necu si Octi stiu ca **Strength nu creste damage-ul ranged**.
-- [ ] **Tipu** stie ca **Agility NU ii da Attack Power** — Strength e stat-ul lui principal.
 - [ ] Toata lumea da **hover pe Character Sheet (`C`)** ca sa verifice valorile pe server.
 - [ ] Nu dam roll pe iteme care nu ne folosesc (vezi tabelul 2.7).
 
