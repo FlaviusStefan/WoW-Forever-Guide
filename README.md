@@ -46,7 +46,22 @@ In WoW exista **5 stats primare**. Ele nu fac nimic direct — ele se **transfor
 Primele 20 de Stamina  →   1 HP / punct
 Fiecare punct PESTE 20 →  10 HP / punct
 ```
-Deci **100 Stamina** = `20 × 1` + `80 × 10` = **820 HP** adaugati peste HP-ul de baza dat de clasa si level.
+Formula pentru bonusul de HP este:
+```
+Bonus HP = MIN(Stamina, 20) × 1 + MAX(Stamina - 20, 0) × 10
+HP total = HP de baza + Bonus HP
+```
+
+`MIN` inseamna „alegem valoarea mai mica”, iar `MAX` nu lasa partea de dupa 20 sa devina negativa.
+
+**Exemplu cu 100 Stamina:**
+```
+Primele 20 puncte: 20 × 1  = 20 HP
+Urmatoarele 80 puncte: 80 × 10 = 800 HP
+Bonus total: 20 + 800 = 820 HP
+```
+
+Asadar, 100 Stamina inseamna **+820 HP**, peste HP-ul de baza dat de clasa si level.
 
 **La fel pentru toate clasele** — nu exista clasa care sa ia mai mult HP per punct de Stamina.
 
@@ -71,13 +86,26 @@ Deci **100 Stamina** = `20 × 1` + `80 × 10` = **820 HP** adaugati peste HP-ul 
 Warrior, Paladin, Shaman, Druid    →  2 Attack Power / Strength
 Rogue, Hunter, Mage, Priest, Lock  →  1 Attack Power / Strength
 
+Bonus AP = Strength × AP primit pentru 1 Strength
 Block Value = Strength / 20
 **NU CRESTE BLOCK CHANCE(%) !**
 
 14 Attack Power = +1 DPS cu arma
 ```
 
-Deci **Sebi (Paladin)** ia **dublu** AP din Strength fata de **Adi (Rogue)**. Acelasi item, efect diferit.
+**Exemplu cu 30 Strength:**
+```
+Sebi (Paladin): 30 × 2 = 60 Attack Power
+Adi (Rogue):    30 × 1 = 30 Attack Power
+Block Value:    30 / 20 = 1,5 (valoarea afisata poate fi rotunjita)
+```
+
+Pentru damage-ul mediu al armei, conversia aproximativa este:
+```
+Bonus DPS = Attack Power / 14
+```
+
+Deci 28 AP inseamna aproximativ `28 / 14 = 2 DPS` in plus. **Sebi (Paladin)** ia dublu AP din Strength fata de **Adi (Rogue)**; acelasi item poate avea efect diferit.
 
 | Cine | Cat conteaza | De ce |
 |---|---|---|
@@ -98,25 +126,35 @@ Deci **Sebi (Paladin)** ia **dublu** AP din Strength fata de **Adi (Rogue)**. Ac
 
 **Cum se calculeaza:**
 ```
-1. ARMOR   →  Agility × 2   (la TOATE clasele)
+1. ARMOR
+      Bonus Armor = Agility × 2   (la TOATE clasele)
 
-2. a.Ranged ATTACK POWER
-      Hunter                            →  2 AP / Agility
-      Rogue, Druid (cat form)           →  1 AP / Agility
-      Warrior, Paladin, SHAMAN, casteri →  0 AP / Agility
+2. ATTACK POWER
+   a. Ranged Attack Power
+      Hunter                            →  2 ranged AP / Agility
 
-   b.Melee ATTACK POWER
-
+   b. Melee Attack Power
+      Rogue, Druid (cat form)           →  1 melee AP / Agility
+      Warrior, Paladin, Shaman, casteri →  0 melee AP / Agility
 
 3. CRIT  (aproximativ, la level 60)
       Warrior / Paladin / Shaman / Druid  →  ~20 Agility = 1% crit
       Rogue                               →  ~29 Agility = 1% crit
       Hunter                              →  ~53 Agility = 1% crit (ranged)
 
-4. DODGE   →  sansa sa eviti complet un atac
+4. DODGE
+      Dodge% = bonusul de dodge oferit de Agility la level-ul tau
 ```
 
-> ⚠️ **ATENTIE, Tipu!** **Shaman-ul NU primeste Attack Power din Agility** in Classic — la fel ca Warrior si Paladin. Din Agility iei doar **crit, armor si dodge**. De aia **Strength** (2 AP / punct) este stat-ul tau principal, nu Agility.
+**Exemplu cu 40 Agility:**
+```
+Armor pentru oricine: 40 × 2 = 80 armor
+Hunter AP:            40 × 2 = 80 ranged AP
+Rogue AP:             40 × 1 = 40 melee AP
+Warrior/Paladin AP:   40 × 0 = 0 AP din Agility
+```
+
+Crit-ul si dodge-ul nu se calculeaza doar impartind la un numar fix pentru toate level-urile. De aceea valorile `~20`, `~29` si `~53` sunt aproximari pentru level 60.
 
 > ⚠️ Valorile de **crit** se schimba cu level-ul si difera pe clasa. **Verifica pe Character Sheet**, nu te lua strict dupa numerele astea.
 
@@ -139,13 +177,25 @@ Deci **Sebi (Paladin)** ia **dublu** AP din Strength fata de **Adi (Rogue)**. Ac
 
 **Cum se calculeaza:**
 ```
-Primele 20 de Intellect  →   1 mana / punct
-Fiecare punct PESTE 20   →  15 mana / punct
+Bonus Mana = Intellect × 15
 
 Spell Crit  →  ~59,5 Intellect = 1%  (la level 60)
 
 Bonus ascuns: creste viteza cu care urci WEAPON SKILL
 ```
+
+**Exemplu cu 60 Intellect:**
+```
+Bonus Mana = 60 × 15 = 900 mana
+Spell crit aproximativ = 60 / 59,5 = 1,01%
+```
+
+Mana de pe Character Sheet este:
+```
+Mana total = Mana de baza a clasei si level-ului + Bonus Mana
+```
+
+Intellect nu inseamna spell damage. El iti da o rezerva mai mare de mana si, indirect, iti permite sa casti mai multe spell-uri inainte sa ramai fara mana.
 
 | Cine | Cat conteaza | De ce |
 |---|---|---|
@@ -178,6 +228,21 @@ Bonus ascuns: creste viteza cu care urci WEAPON SKILL
 Priest, Mage                             →  (Spirit / 4) + 12,5
 Druid, Hunter, Paladin, Shaman, Warlock  →  (Spirit / 5) + 15
 ```
+
+Formula se aplica la fiecare tick de 2 secunde, nu la fiecare lovitura sau spell:
+```
+Mana regen pe secunda = Mana regen pe tick / 2
+Mana regen in 10 secunde = Mana regen pe tick × 5
+```
+
+**Exemplu pentru Vladi cu 80 Spirit:**
+```
+Mana pe tick = (80 / 4) + 12,5 = 32,5 mana
+Mana pe secunda = 32,5 / 2 = 16,25 mana
+In 10 secunde = 32,5 × 5 = 162,5 mana
+```
+
+Acest calcul este valabil doar cand regula celor 5 secunde permite regen-ul. Daca ai cheltuit mana recent, valoarea reala poate fi `0` pana iesi din acea fereastra.
 
 > 🕒 **REGULA CELOR 5 SECUNDE (5-Second Rule)** — cel mai important mecanism legat de Spirit:
 >
@@ -234,6 +299,20 @@ Reducere damage % = Armor / (Armor + 400 + 85 × Level_Atacator)
 
 CAP: maxim 75% reducere — mai mult armor peste cap nu face nimic
 ```
+
+**Exemplu:** la 2.000 armor si un atacator level 60:
+```
+Reducere = 2000 / (2000 + 400 + 85 × 60)
+         = 2000 / 7500
+         = 26,67%
+```
+
+Cu alte cuvinte, un atac fizic de 1.000 damage devine aproximativ:
+```
+Damage primit = 1000 × (1 - 0,2667) = 733 damage
+```
+
+Formula foloseste level-ul **atacatorului**, nu level-ul tau. Armor-ul nu reduce damage magic.
 
 > ⚠️ Armor-ul reduce **DOAR damage fizic**. **Nu** te apara deloc de magie — pentru aia ai nevoie de **Resistances** (Fire, Frost, Shadow, Nature, Arcane).
 
